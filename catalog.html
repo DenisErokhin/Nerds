@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="page catalog-page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: {{projectTitle}}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+
+<body class="page-body catalog-body">
+
+  <header class="page-header">
+    <div class="header-page-wrapper container">
+      <a class="header-logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65"
+          alt="Логотип сайта Нердс"></a>
+      <ul class="main-navigation">
+        <li class="navigation-item"><a href="index.html" class="navigation-link">Студия</a></li>
+        <li class="navigation-item"><a class="navigation-link " href="#">Клиенты</a></li>
+        <li class="navigation-item"><a class="navigation-link navigation-link-active">Магазин</a></li>
+        <li class="navigation-item"><a class="navigation-link" href="#">Контакты</a></li>
+      </ul>
+      <div class="user-navigation">
+        <a class="navigation-basket" href="#">Корзина</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-catalog">
+    <div class="catalog-title-box">
+      <h1 class="catalog-title">Магазин готовых шаблонов</h1>
+    </div>
+    <div class="container main-catalog-wrapper">
+      <form class="filters-form" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="filter-cost-group">
+          <legend class="filter-title">Стоимость:</legend>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="
+                 width:65%;
+                 margin-left: 0%;
+                 "></div>
+              </div>
+              <div class="toogle toogle-min" tabindex="0" aria-label="первый ползунок регулировка цены от" style="
+                left: 7%;
+              "></div>
+              <div class="toogle toogle-max" tabindex="0" aria-label="второй ползунок регулировка цены до" style="
+                left: 62%;
+              "></div>
+            </div>
+            <div class="price-controls">
+              <label class="filter-price-name" for="filter-price-from">От
+                <input class="filter-price" type="text" name="min-price" id="filter-price-from" value="0"
+                  aria-label="поле ввода цены от">
+              </label>
+              <label class="filter-price-name" for="filter-price-to">До
+                <input class="filter-price" type="text" name="max-price" id="filter-price-to" value="150 000"
+                  aria-label="поле ввода цены до">
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="filter-grid-group">
+          <legend class="filter-title">Сетка:</legend>
+          <p>
+            <input class="visually-hidden grid-radio grid-radio-active" type="radio" id="radio-adaptiv" value="adaptive"
+              name="grid" checked>
+            <label for="radio-adaptiv">Адаптивная</label>
+          </p>
+          <p>
+            <input class="visually-hidden grid-radio" type="radio" id="radio-fics" value="fixed" name="grid">
+            <label for="radio-fics">Фиксированная</label>
+          </p>
+          <p>
+            <input class="visually-hidden grid-radio" type="radio" id="radio-rezin" value="rubber" name="grid">
+            <label for="radio-rezin">Резиновая</label>
+          </p>
+        </fieldset>
+        <fieldset class="filter-features-group">
+          <legend class="filter-title">Особенности:</legend>
+          <p>
+            <input class="visually-hidden features-checkbox features-checkbox-active" type="checkbox"
+              id="checkbox-slaider" name="features" value="slider" checked>
+            <label for="checkbox-slaider">Слайдер</label>
+          </p>
+          <p>
+            <input class="visually-hidden features-checkbox" type="checkbox" id="checkbox-bl-prime" name="features"
+              value="benefits block">
+            <label for="checkbox-bl-prime">Блок преимуществ</label>
+          </p>
+          <p>
+            <input class="visually-hidden features-checkbox features-checkbox-active" type="checkbox" id="checkbox-news"
+              name="features" value="news" checked>
+            <label for="checkbox-news">Новости</label>
+          </p>
+          <p>
+            <input class="visually-hidden features-checkbox" type="checkbox" id="checkbox-galery" name="features"
+              value="gallery">
+            <label for="checkbox-galery">Галерея</label>
+          </p>
+          <p>
+            <input class="visually-hidden features-checkbox" type="checkbox" id="checkbox-basket" name="features"
+              value="basket">
+            <label for="checkbox-basket">Корзина</label>
+          </p>
+        </fieldset>
+        <input class="button filter-button" type="submit" value="Показать" aria-label="Показать результаты фильтрации">
+      </form>
+
+      <section class="sort">
+        <h2 class="visually-hidden">Сортировка</h2>
+        <h3 class="sort-title">Сортировать:</h3>
+        <ul class="sort-list">
+          <li class="sort-item">
+            <a class="sort-link sort-link-active" href="#" aria-label="Сортировать по цене">По цене</a>
+          </li>
+          <li class="sort-item">
+            <a class="sort-link" href="#" aria-label="Сортировать по типу">По типу</a>
+          </li>
+          <li class="sort-item">
+            <a class="sort-link" href="#" aria-label="Сортировать по названию">По названию</a>
+          </li>
+          <li class="sort-item">
+            <a class="sort-link arrow-down sort-link-active" href="#" aria-label="сортировать по убыванию">
+            </a>
+          </li>
+          <li class="sort-item">
+            <a class="sort-link arrow-up" href="#" aria-label="сортировать по возрастанию">
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="products">
+        <h2 class="visually-hidden">Товары</h2>
+        <ul class="products-list">
+          <li class="product-item">
+            <div class="product-slider-container">
+              <button class="product-slider-button" type="button" aria-label="Первый слайд сайта Седона"></button>
+              <button class="product-slider-button" type="button" aria-label="Второй слайд сайта Седона"></button>
+              <button class="product-slider-button" type="button" aria-label="Третий слайд сайта Седона"></button>
+            </div>
+            <div>
+              <img class="product-img" src="img/products/sedona.png" width="358" height="578"
+                alt="информационный сайт для туристов Седона">
+            </div>
+            <div class="product-inner">
+              <a class="product-link" href="#" aria-label="Перейти на страницу товара сайта Седона">
+                <h3 class="product-name">Sedona</h3>
+              </a>
+              <p class="product-desc">Информационный сайт<br> для туристов</p>
+              <a class="button product-button" href="#"
+                aria-label="добавить в корзину сайт Седона стоимостью 9 900 рублей">9 900 ₽</a>
+            </div>
+          </li>
+          <li class="product-item">
+            <div class="product-slider-container">
+              <button class="product-slider-button" type="button" aria-label="Первый слайд сайта Пинк Апп"></button>
+              <button class="product-slider-button" type="button" aria-label="Второй слайд сайта Пинк Апп"></button>
+              <button class="product-slider-button" type="button" aria-label="Третий слайд сайта Пинк Апп"></button>
+            </div>
+            <img class="product-img" src="img/products/pink.png" width="358" height="578"
+              alt="сайт продуктового лендинга приложений Пинк апп">
+            <div class="product-inner">
+              <a class="product-link" href="#" aria-label="Перейти на страницу товара сайта Пинк Апп">
+                <h3 class="product-name">Pink app</h3>
+              </a>
+              <p class="product-desc">Продуктовый лендинг<br> приложения для iOS и Android</p>
+              <a class="button product-button" href="#"
+                aria-label="добавить в корзину сайт Пинк Апп стоимостью 9 900 рублей">9 900 ₽</a>
+            </div>
+          </li>
+          <li class="product-item">
+            <div class="product-slider-container">
+              <button class="product-slider-button" type="button" aria-label="Первый слайд сайта Барбершоп"></button>
+              <button class="product-slider-button" type="button" aria-label="Второй слайд сайта Барбершоп"></button>
+              <button class="product-slider-button" type="button" aria-label="Третий слайд сайта Барбершоп"></button>
+            </div>
+            <img class="product-img" src="img/products/barbershop.png" width="358" height="578"
+              alt="сайт барбершопа Бордински">
+            <div class="product-inner">
+              <a class="product-link" href="#" aria-label="Перейти на страницу товара сайта Барбершоп">
+                <h3 class="product-name">Barbershop</h3>
+              </a>
+              <p class="product-desc">Сайт салона красоты.<br> Для мужчин, да.</p>
+              <a class="button product-button" href="#"
+                aria-label="добавить в корзину сайт Барбершоп стоимостью 9 900 рублей">9 900 ₽</a>
+            </div>
+          </li>
+          <li class="product-item">
+            <div class="product-slider-container">
+              <button class="product-slider-button" type="button" aria-label="Первый слайд сайта Мишка"></button>
+              <button class="product-slider-button" type="button" aria-label="Второй слайд сайта Мишка"></button>
+              <button class="product-slider-button" type="button" aria-label="Третий слайд сайта Мишка"></button>
+            </div>
+            <img class="product-img" src="img/products/mishka.png" width="358" height="578"
+              alt="сайт детских игрушек Мишка">
+            <div class="product-inner">
+              <a class="product-link" href="#" aria-label="Перейти на страницу товара сайта Мишка">
+                <h3 class="product-name">Mishka</h3>
+              </a>
+              <p class="product-desc">Интернет-магазин<br> вязаных игрушек</p>
+              <a class="button product-button" href="#"
+                aria-label="добавить в корзину сайт Мишка стоимостью 9 900 рублей">9 900 ₽</a>
+            </div>
+          </li>
+          <li class="product-item">
+            <div class="product-slider-container">
+              <button class="product-slider-button" type="button" aria-label="Первый слайд сайта А Плюс"></button>
+              <button class="product-slider-button" type="button" aria-label="Второй слайд сайта А Плюс"></button>
+              <button class="product-slider-button" type="button" aria-label="Третий слайд сайта A Плюс"></button>
+            </div>
+            <img class="product-img" src="img/products/school.png" width="358" height="578"
+              alt="сайт для обучения А плюс">
+            <div class="product-inner">
+              <a class="product-link" href="#" aria-label="Перейти на страницу товара сайта А Плюс">
+                <h3 class="product-name">A plus</h3>
+              </a>
+              <p class="product-desc">Лендинг курсов повышения<br> квалификации</p>
+              <a class="button product-button" href="#"
+                aria-label="добавить в корзину сайт А Плюс стоимостью 9 900 рублей">9 900 ₽</a>
+            </div>
+          </li>
+          <li class="product-item">
+            <div class="product-slider-container">
+              <button class="product-slider-button" type="button" aria-label="Первый слайд сайта Кваст"></button>
+              <button class="product-slider-button" type="button" aria-label="Второй слайд сайта Кваст"></button>
+              <button class="product-slider-button" type="button" aria-label="Третий слайд сайта Кваст"></button>
+            </div>
+            <img class="product-img" src="img/products/kvast.png" width="358" height="578"
+              alt="сайт крафтового кваса Кваст">
+            <div class="product-inner">
+              <a class="product-link" href="#" aria-label="Перейти на страницу товара сайта Кваст">
+                <h3 class="product-name">Кваст</h3>
+              </a>
+              <p class="product-desc">Промо-сайт производителя<br> крафтового кваса</p>
+              <a class="button product-button" href="#"
+                aria-label="добавить в корзину сайт Кваст стоимостью 9 900 рублей">9 900 ₽</a>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="pagination-list">
+          <li class="pagination-item">
+            <a class="pagination-link pagination-link-active">1</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#" aria-label="вторая страница товаров">2</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#" aria-label="третья страница товаров">3</a>
+          </li>
+          <li class="pagination-item">
+            <a class="button pagination-link" href="#" aria-label="следующая страница товаров">Следующая</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8114849732326!2d30.313384530641503!3d59.96845049046444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696314db404b36b%3A0x1d934f1978240bba!2zTtGRcmRz!5e0!3m2!1sru!2s!4v1650193447289!5m2!1sru!2s"
+        height="416" allowfullscreen
+        title="Офис дизайн студии по адресу набережная реки Карповки, 5 лит П, Санкт-Петербург"></iframe>
+      <div class="container">
+        <section class="contacts">
+          <h2 class="visually-hidden">Cвязь с нами</h2>
+          <p class="contact-name">NЁRDS DESIGN STUDIO</p>
+          <p class="contact-address">наб. Реки Карповки,<br> 5 лит.П, Санкт-Петербург</p>
+          <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+          <a class="button contacts-button" href="#">Напишите нам</a>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer catalog-footer">
+    <div class="container">
+      <section class="social-footer">
+        <h2 class="visually-hidden">Мы в соцсетях</h2>
+        <ul class="social-list">
+          <li class="social-item">
+            <a class="social-link social-vkontakte" href="https://vk.com" aria-label="вконтакте"></a>
+          </li>
+          <li class="social-item">
+            <a class="social-link social-facebook" href="https://www.facebook.com" aria-label="фейсбук"></a>
+          </li>
+          <li class="social-item">
+            <a class="social-link social-instagram" href="https://www.instagram.com" aria-label="инстаграм"></a>
+          </li>
+        </ul>
+        <p class="social-slogan">Давайте дружить, это выгодно!</p>
+        <p class="social-text">Скидка 10% для друзей из социальных сетей.</p>
+      </section>
+    </div>
+  </footer>
+
+  <section class="modal modal-email">
+    <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
+      <h2 class="login-title">Напишите нам</h2>
+      <div class="login-name-inner">
+        <label for="name">Ваше имя:</label>
+        <input class="login-name" type="text" id="name" name="name" placeholder="Имя Фамилия">
+      </div>
+      <div class="login-email-inner">
+        <label for="email">Ваш email:</label>
+        <input class="login-email" type="email" id="email" name="email" placeholder="email@example.com">
+      </div>
+      <div class="login-text-inner">
+        <label for="text_letter">Текст письма:</label>
+        <textarea class="login-text-field" id="text_letter" name="text_letter"
+          placeholder="В свободной форме"></textarea>
+      </div>
+      <button class="button login-button" type="submit">Отправить</button>
+    </form>
+    <button class="modal-close" type="button" aria-label="Закрыть">
+    </button>
+  </section>
+  <script src="js/loginModal.min.js"></script>
+</body>
+
+</html>
